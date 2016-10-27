@@ -1,0 +1,91 @@
+
+body{
+  @extend %sticky-footer-wrapper;
+  padding: 0 10px;
+  @include breakpoint($lg) {
+    padding: 0;
+  }
+}
+
+%border {
+  border: 1px dashed #bbb;
+}
+
+#main-container {
+  @extend %sticky-footer-content;
+  width: 100%;
+  max-width: $main-width;
+  margin-top:18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; 
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-right: -$gutter-px;
+  @include breakpoint($lg) {
+    flex-direction: row;
+  }
+}
+
+%cell-padding {
+  padding: 25px;
+  margin-right: $gutter-px;
+  margin-bottom: $gutter-px;
+}
+
+%cell-common {
+  flex-direction: row; 
+  flex: 1 1 auto;
+  flex-shrink: 0;
+}
+
+@for $i from 1 through $columns {
+  .cell-#{$i}{
+    @extend %cell-padding;
+    @extend %border;
+    @extend %cell-common;
+    flex-basis: ($multiplier - $gutter) * $i;
+  }  
+  .cell-#{$i}-nopadding{
+    @extend %cell-common;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-basis: ($multiplier - $gutter*2) * $i;
+  }  
+}
+
+.vertical-stretch {
+  display: flex;
+  flex-direction: column; 
+  align-items: stretch;
+}
+
+.col-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row wrap;
+  flex-direction: column;
+  @include breakpoint($sm) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include breakpoint($lg) {
+    justify-content: space-between;
+  }
+  * {
+    align-self: center;
+  }
+}
+
+.col-no-stretch {
+  flex-grow: 0;
+}
+
+.center-cols {
+  justify-content: center; 
+}

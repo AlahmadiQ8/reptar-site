@@ -1,0 +1,1 @@
+var prism = require('./prism');

@@ -1,0 +1,39 @@
+// --------------------------------------------------
+// BANNER 
+// 
+
+.profile {
+  background: $blue-black;
+  border: none;
+  text-align: center;
+  h1 {
+    line-height: 1em;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  a {
+    color: white;
+    &:hover {
+      cursor: pointer;
+      color: $hover-color;
+      text-decoration: none;
+    }
+  }
+  img {
+    @include img-fluid;
+  }
+}
+
+
+
+.social-list{
+  margin-top: 1em;
+  margin-bottom: .5em;
+  display: flex;
+  justify-content: space-around; 
+}
+.social-item{
+  display: inline;
+  font-size: 1.5rem;
+  // padding: 0 .25em 0 .25em;
+}

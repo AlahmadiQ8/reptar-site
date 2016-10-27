@@ -1,0 +1,89 @@
+
+html {
+  font-size: $font-size-root;
+}
+
+
+*, :after, :before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ ol,
+ ul {
+  margin: 0;
+  padding-left: 20px;
+  // list-style: none;
+ }
+ li {
+  margin-bottom: .3em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+ }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 300ms 0s ease;
+  // font-weight: 400;
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+}
+
+h1, h2, p, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: $h2-color;
+  line-height: $line-height-h1;
+}
+h2 {
+  font-size: $font-size-h3;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: $h3-color;
+}
+
+h3 { 
+  font-size: $font-size-h3;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: $h3-color;
+}
+
+p, ul, ol, li {
+  font-weight: 300;
+}
+
+p, ul, ol {
+  margin-bottom: .6em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+body {
+  line-height: $line-height;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  color: $p-color;
+}
+
+.small-text * {
+  font-size: $font-size-sm;
+}
+
+.align-center{
+  text-align: center;
+}

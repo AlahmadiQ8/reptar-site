@@ -1,0 +1,112 @@
+// --------------------------------------------------
+// COLORS 
+// 
+
+/**
+ */
+ 
+$blue:                      #39ADD1 !default;
+$blue-alt:                  rgb(127, 173, 242) !default;
+$blue-light:                #72D4FF;
+$blue-black:                #253746;
+// $green:                     rgb(117, 204, 31) !default;;
+$green:                     #5CB860 !default;
+$pink:                      #F092B0 !default;
+$pink-dark:                 #C25975 !default;
+
+/* CYAN COLOR SCHEME
+ */
+$cyan:                      #69AED1 !default;   // main banner, links, buttons
+$cyan-grey:                 #C8D5DB !default;   // footer, border
+$purple-light:              #777999 !default;
+$green-nice:                #699    !default;
+$yellow-dark:               #F1C476 !default;
+$yellow-light:              rgb(251, 230, 193) !default;
+
+/* RED COLOR SCHEME
+ */
+$red:               #DB4437 !default
+
+/** COMMON 
+ */
+$gray-darkest:              #444444 !default;
+$gray-darker:               #5B5B5B !default;
+$gray-dark:                 #737273 !default;
+$gray:                      #A3A3A3 !default;
+$gray-light:                #eceeef !default;
+$gray-lighter:              #FAFAFA !default;
+$gray-lightest:             #FCFCFC !default;
+
+
+
+/* THEME COLOR MAPPING
+ */
+$h1-color:                $pink-dark;
+$h2-color:                $pink-dark;//$red;//$pink;
+$h3-color:                #333;
+$p-color:                 #333;
+
+$link-color:              $blue;
+$hover-color:             $blue-light;
+
+
+
+// --------------------------------------------------
+// FONTS 
+// 
+
+// font-family
+$font-family-sans-serif:     "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-ejs:            'Montserrat', sans-serif;
+
+$font-family-base:           $font-family-sans-serif;
+// $font-family-banner:         'Handlee', 'Dancing Script', 'Redressed', cursive;
+// $font-family-banner:         'Varela Round', $font-family-base;
+// $font-family-navigation:     'Montserrat', sans-serif;
+// $font-family-secion-h1:      'Montserrat', sans-serif;//'Varela Round', $font-family-base;
+// $font-family-secion-h2:      'Montserrat', sans-serif;//'Varela Round', $font-family-base;
+
+// font-size
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root:             16px !default;
+
+$font-size-base:             1.13rem !default;
+// $font-size-lg:               1.25rem !default;
+$font-size-md:               1rem !default;
+$font-size-sm:               .875rem !default;
+$font-size-xs:               .75rem !default;
+
+$font-size-h1:               1.7rem !default;
+$font-size-h2:               2.8rem !default;
+$font-size-h3:               1.3rem !default;
+
+$line-height:                1.4em !default;
+$line-height-h1:             1.2em !default;
+$line-height-h2:             1.2em !default;
+
+
+
+// --------------------------------------------------
+// BREAK POINTS 
+// 
+
+$xs:    0;      // Extra small screen / phone
+$sm:    544px;  // Small screen / phone
+$md:    768px;  // Medium screen / tablet
+$mdlg:  800px;  // Medium screen / tablet
+$lg:    992px;  // Large screen / desktop
+$xl:    1200px; // Extra large screen / wide desktop
+
+// --------------------------------------------------
+// GRID 
+// 
+
+$main-width:   1000px;
+$gutter:       .9%; 
+$gutter-px:    $main-width* $gutter/100%;
+$columns:      24; 
+$multiplier:   100%/$columns;
+
+

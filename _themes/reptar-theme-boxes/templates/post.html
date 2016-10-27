@@ -1,0 +1,29 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+
+<div class="container center-cols vertical-stretch">
+  <article class="cell-24 ">
+
+    <div class="article-container">
+      <h1 class='align-center'>{{ file.title }}</h1>
+      <p class='article-details'>
+        <time class='date' datetime="{{file.date | date('D MMMM YYYY')}}"><strong>Posted on: </strong> {{file.date | date('D MMMM YYYY')}}</time>
+        <span class='date'><strong>Tags: </strong> 
+          {% for tag in file.tags %}
+          <a href="/tag/{{tag}}" class='tag-link'>{{tag}}</a>
+          {% endfor%}
+        </span>
+      </p>
+
+      <section class="post-content">
+      {{file.content | safe}}
+      </section>
+
+    </div>
+
+  </article>
+</div>
+
+{% endblock%}

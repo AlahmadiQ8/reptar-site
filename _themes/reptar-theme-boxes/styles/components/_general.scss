@@ -1,0 +1,96 @@
+//--------------------------
+// MISC
+//
+.secondary {
+  color: $gray;
+}
+
+//--------------------------
+// TAGS 
+//
+.tag-link {
+  color: $gray-dark;
+  font-weight: 400;
+  &:hover {
+    color: $gray;
+  }
+  &:before{
+    content: "#";
+  }
+  &:after{
+    content: "\00a0";
+  }
+}
+
+//--------------------------
+// POST 
+//
+article {
+  border-left: none !important;
+  border-right: none !important;
+
+  .article-container {
+    width: 100% !important;
+    margin-right: auto;
+    margin-left: auto;
+    @include breakpoint($md) {
+      width: 75% !important;
+    }
+  }
+
+  p, ul, ol, li {
+    font-size: 1rem;
+    line-height: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    padding: .4em 0 0.4em 0;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  h3 {
+    font-size: 1.2rem; 
+    color: $gray-darker;
+  }
+
+  .post-content strong {
+    font-weight: bold;
+  }
+
+  code {
+    padding: 0 .3em 0 .3em;
+    background-color: $gray-light;
+    color: $pink-dark;
+  }
+  pre {
+    font-size: 0.85rem;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: .7em 1em;
+    border-left: 1px solid #bbb;
+  }
+}
+
+//--------------------------
+// ARTICLE DETAILED
+//
+.article-details {
+  // font-size: $font-size-sm;
+  color: $gray;
+  > * {
+    margin-right: 1em;
+  }
+}
+
+//--------------------------
+// SIDEBAR  DEPRACATED
+//
+.sidebar {
+  p, ul, li {
+    font-size: $font-size-md;
+  }
+}
+

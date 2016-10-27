@@ -1,0 +1,27 @@
+name: 'boxes'
+
+path:
+  templates:   ./templates
+  plugins:     ./plugins
+  destination: ./
+
+
+assets:
+  css:
+    source: ./styles/main.scss
+    processor:
+      name: sass
+      hash: true
+      plugins:
+        autoprefixer:
+          browsers: ["last 2 versions"]
+        clean-css:
+
+  js:
+    source: ./js/main.js
+    processor:
+      hash: true
+      name: browserify
+      plugins:
+        babelify:
+        uglifyify:

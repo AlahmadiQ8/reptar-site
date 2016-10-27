@@ -1,0 +1,51 @@
+
+%border {
+  border: 1px dashed #bbb;
+}
+
+
+// Responsive Sticky Footer
+//
+// Source: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+// Include the 1st mixin in a parent element that contains main content and footer
+// Add the 2nd mixin to the main content (right before the footer)
+%sticky-footer-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+%sticky-footer-content {
+  flex: 1;
+}
+
+// Add box Shadow
+// 
+// Ispiration: https://sketchtricks.com/ in testomonial section
+%box-shadow {
+  -webkit-box-shadow: 0 0 24px 0 rgba(0,0,0,.12),0 0 16px 0 rgba(0,0,0,.06);
+  -moz-box-shadow: 0 0 24px 0 rgba(0,0,0,.12),0 0 16px 0 rgba(0,0,0,.06);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.12),0 0 16px 0 rgba(0,0,0,.06); 
+}
+
+// Sexy Line 
+// 
+// Source: https://css-tricks.com/simple-styles-for-horizontal-rules/
+// Transparent on the edges
+%sexy-line { 
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $yellow-dark, rgba(0, 0, 0, 0));
+  width: 70%;
+  // margin-left: span();
+}
+
+// Center Vertical & Horizontal
+//
+// Parent container MUST have position: relative
+// NO LONGER USED 
+%centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
