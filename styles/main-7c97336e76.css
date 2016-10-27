@@ -7039,9 +7039,9 @@ h3 {
 p, ul, ol, li {
   font-weight: 300; }
 
-p, ul, ol {
+p, ul, ol, blockquote {
   margin-bottom: .6em; }
-  p:last-child, ul:last-child, ol:last-child {
+  p:last-child, ul:last-child, ol:last-child, blockquote:last-child {
     margin-bottom: 0; }
 
 body {
@@ -7402,7 +7402,8 @@ article {
     border-bottom: 1px solid #e1e1e1; }
   article h3 {
     font-size: 1.2rem;
-    color: #5B5B5B; }
+    color: #5B5B5B;
+    margin-top: 1em; }
   article .post-content strong {
     font-weight: bold; }
   article code {
@@ -7412,7 +7413,9 @@ article {
   article pre {
     font-size: 0.85rem; }
   article blockquote {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     padding: .7em 1em;
     border-left: 1px solid #bbb;
     color: #A3A3A3; }
