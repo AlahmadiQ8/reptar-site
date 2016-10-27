@@ -1,7 +1,7 @@
 <header class='container'>
   <div class="cell-9 profile col-flex">
     <div class="  align-center">
-      <h1><a href="/">Mohammad²</a></h1>  
+      <h1><a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">Mohammad²</a></h1>  
       <div class="social-list">
         <a target='_blank' class="social-item" href="{{ site.data.site_info.social.github }}"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
         <a target='_blank' class="social-item" href="{{ site.data.site_info.social.instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -10,8 +10,7 @@
         <a target='_blank' class="social-item" href="{{ site.data.site_info.social.linkedin }}"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
       </div>
     </div>
-    
-    <img class='' src="/img/avatar.png">
+    <img class='' src="{% if site.baseurl %}{{site.baseurl}}{% endif %}/img/avatar.png">
   </div> 
 
   <div class="cell-15 col-flex">

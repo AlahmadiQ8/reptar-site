@@ -5,6 +5,16 @@
   color: $gray;
 }
 
+.message {
+  @extend %cell-common;
+  @extend %border;
+  margin-right: $gutter-px;
+  margin-bottom: $gutter-px;
+  padding: 10px 25px;
+  border-color: #D32F2F; 
+  color: #D32F2F;
+}
+
 //--------------------------
 // TAGS 
 //
@@ -26,15 +36,15 @@
 // POST 
 //
 article {
-  border-left: none !important;
-  border-right: none !important;
+  border: none !important;
+  // border-right: none !important;
 
   .article-container {
-    width: 100% !important;
-    margin-right: auto;
-    margin-left: auto;
+    // width: 100% !important;
+    // margin-right: auto;
+    // margin-left: auto;
     @include breakpoint($md) {
-      width: 75% !important;
+      // width: 75% !important;
     }
   }
 
@@ -52,6 +62,7 @@ article {
   h3 {
     font-size: 1.2rem; 
     color: $gray-darker;
+    margin-top: 1em;
   }
 
   .post-content strong {
@@ -68,9 +79,15 @@ article {
   }
 
   blockquote {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     padding: .7em 1em;
     border-left: 1px solid #bbb;
+    color: $gray;
+    p {
+      font-weight: 400;
+    }
   }
 }
 

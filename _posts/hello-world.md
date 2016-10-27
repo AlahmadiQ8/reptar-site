@@ -151,14 +151,14 @@ chokidar.watch('file', {
 recursively, or glob patterns.
 * `options` (object) Options object as defined below:
 
-#### Persistence
+### Persistence
 
 * `persistent` (default: `true`). Indicates whether the process
 should continue to run as long as files are being watched. If set to
 `false` when using `fsevents` to watch, no more events will be emitted
 after `ready`, even if the process continues to run.
 
-#### Path filtering
+### Path filtering
 
 * `ignored` ([anymatch](https://github.com/es128/anymatch)-compatible definition)
 Defines files/paths to be ignored. The whole relative or absolute path is
@@ -175,7 +175,7 @@ the link references and bubbling events through the link's path.
 * `cwd` (no default). The base directory from which watch `paths` are to be
 derived. Paths emitted with events will be relative to this.
 
-#### Performance
+### Performance
 
 * `usePolling` (default: `false`).
 Whether to use fs.watchFile (backed by polling), or fs.watch. If polling
@@ -219,7 +219,7 @@ Use with caution.
   milliseconds for a file size to remain constant before emitting its event.
   * `awaitWriteFinish.pollInterval` (default: 100). File size polling interval.
 
-#### Errors
+### Errors
 * `ignorePermissionErrors` (default: `false`). Indicates whether to watch files
 that don't have read permissions if possible. If watching fails due to `EPERM`
 or `EACCES` with this set to `true`, the errors will be suppressed silently.

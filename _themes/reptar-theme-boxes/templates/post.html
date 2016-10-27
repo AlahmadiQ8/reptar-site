@@ -3,11 +3,11 @@
 
 {% block content %}
 
-<div class="container center-cols vertical-stretch">
-  <article class="cell-24 ">
+<div class="container">
+  <article class="cell-24 col-no-stretch">
 
-    <div class="article-container">
-      <h1 class='align-center'>{{ file.title }}</h1>
+    <div class="article-container ">
+      <h1>{{ file.title }}</h1>
       <p class='article-details'>
         <time class='date' datetime="{{file.date | date('D MMMM YYYY')}}"><strong>Posted on: </strong> {{file.date | date('D MMMM YYYY')}}</time>
         <span class='date'><strong>Tags: </strong> 

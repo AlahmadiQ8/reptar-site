@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "reptar build && reptar watch",
+    "build": "reptar build",
+    "deploy": "gh-pages -d _site",
+    "bd": "npm run build && npm run deploy"
   },
   "keywords": [],
   "author": "",

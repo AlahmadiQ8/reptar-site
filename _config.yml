@@ -7,8 +7,9 @@ site:
   email: m91.alahmadi@gmail.com
   description: > # this means to ignore newlines until "baseurl:"
     My personal website. 
-  baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://alahmadiq8.github.io/" # the base hostname & protocol for your site
+  baseurl: "/reptar-site" # the subpath of your site, e.g. /blog
+  # baseurl: "" # the subpath of your site, e.g. /blog
+  url: "http://alahmadiq8.github.io" # the base hostname & protocol for your site
 
 # Where things are.
 # If you have a unique layout for your site and want to
@@ -42,7 +43,7 @@ file:
          # Any file in this path will have the default values applied.
          path: ./
       values:
-        template: index
+        template: page
         permalink: /:title/
     -
       scope:
