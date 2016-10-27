@@ -185,14 +185,14 @@ chokidar<span class="token punctuation" >.</span><span class="token function" >w
 recursively, or glob patterns.</li>
 <li><code>options</code> (object) Options object as defined below:</li>
 </ul>
-<h4>Persistence</h4>
+<h3>Persistence</h3>
 <ul>
 <li><code>persistent</code> (default: <code>true</code>). Indicates whether the process
 should continue to run as long as files are being watched. If set to
 <code>false</code> when using <code>fsevents</code> to watch, no more events will be emitted
 after <code>ready</code>, even if the process continues to run.</li>
 </ul>
-<h4>Path filtering</h4>
+<h3>Path filtering</h3>
 <ul>
 <li><code>ignored</code> (<a href="https://github.com/es128/anymatch">anymatch</a>-compatible definition)
 Defines files/paths to be ignored. The whole relative or absolute path is
@@ -209,7 +209,7 @@ the link references and bubbling events through the link's path.</li>
 <li><code>cwd</code> (no default). The base directory from which watch <code>paths</code> are to be
 derived. Paths emitted with events will be relative to this.</li>
 </ul>
-<h4>Performance</h4>
+<h3>Performance</h3>
 <ul>
 <li><code>usePolling</code> (default: <code>false</code>).
 Whether to use fs.watchFile (backed by polling), or fs.watch. If polling
@@ -259,7 +259,7 @@ milliseconds for a file size to remain constant before emitting its event.</li>
 </ul>
 </li>
 </ul>
-<h4>Errors</h4>
+<h3>Errors</h3>
 <ul>
 <li><code>ignorePermissionErrors</code> (default: <code>false</code>). Indicates whether to watch files
 that don't have read permissions if possible. If watching fails due to <code>EPERM</code>
