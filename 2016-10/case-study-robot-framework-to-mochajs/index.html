@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/reptar-site/styles/main-2835909af5.css">
+  <title>Mohammad^2</title>
+</head>
+
+<body>
+  <div id="main-container">
+
+    <header class='container'>
+  <div class="cell-9 profile col-flex">
+    <div class="  align-center">
+      <h1><a href="/reptar-site">Mohammad²</a></h1>  
+      <div class="social-list">
+        <a target='_blank' class="social-item" href="https://github.com/AlahmadiQ8"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+        <a target='_blank' class="social-item" href="https://www.instagram.com/boas3d/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a target='_blank' class="social-item" href="https://www.facebook.com/m91.mohammad"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a target='_blank' class="social-item" href="http://stackoverflow.com/users/5431968/mmohammad"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+        <a target='_blank' class="social-item" href="https://www.linkedin.com/in/mohammad91"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <img class='' src="/reptar-site/img/avatar.png">
+  </div> 
+
+  <div class="cell-15 col-flex">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in</p>
+  </div>
+  
+</header>
+
+    
+
+<div class="container">
+  <article class="cell-24 col-no-stretch">
+
+    <div class="article-container ">
+      <h1>Case Study Robot Framework to Mochajs</h1>
+      <p class='article-details'>
+        <time class='date' datetime="26 October 2016"><strong>Posted on: </strong> 26 October 2016</time>
+        
+      </p>
+
+      <section class="post-content">
+      <p>In this document I present a case for migrating the current ED Rest unit tests
+to a Javascript test framework <a href="https://mochajs.org/">Mochajs</a>. I will describe
+the reasons that led me to my case. I'll also breifly descript the alternative
+Javascript test framework.</p>
+<h2>Reasons for Migrating from RF to Mochajs (Javascript Framework)</h2>
+<h3>Using a real programming language is more suitable for logic-intensive unit tests</h3>
+<blockquote>
+<p>The ability to describe scenarios in natural language (which is one of the strongest features of systems like RF) is worthless in unit tests. At this level of testing scenarios are for input x you get output y. RF is best suited in Acceptance Testing and Integration Testing, the top-grained verification of your system. — <a href="http://stackoverflow.com/a/21565221/5431968">Answer on Stackoverflow</a></p>
+</blockquote>
+<p>I am writing test cases to isolated tests for REST API calls. It is much fast to write them
+in a real programing language. In Robot Framework, I would constantly need to write new keywords
+everytime I write tests. Here is an example:</p>
+<p>Here is an oversimplified scenario where I have to write tests for <code>GET /devices</code> and <code>POST /devices</code>. Below is how I would write the tests with <a href="https://mochajs.org/">Mochajs</a> and <a href="http://chaijs.com/">Chajs</a> assertion library:</p>
+<pre><code class="language-javascript"><span class="token keyword" >var</span> url <span class="token operator" >=</span> <span class="token string" >'qa-rest.elephantdrive.com'</span><span class="token punctuation" >;</span>
+
+<span class="token function" >describe</span><span class="token punctuation" >(</span><span class="token string" >'Devices'</span><span class="token punctuation" >,</span> <span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> <span class="token punctuation" >{</span>
+  
+  <span class="token function" >describe</span><span class="token punctuation" >(</span><span class="token string" >'GET /devices'</span><span class="token punctuation" >)</span>
+    <span class="token function" >it</span><span class="token punctuation" >(</span><span class="token string" >'shoud GET all devices'</span><span class="token punctuation" >,</span> <span class="token punctuation" >(</span>done<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> <span class="token punctuation" >{</span>
+      chai<span class="token punctuation" >.</span><span class="token function" >request</span><span class="token punctuation" >(</span>url<span class="token punctuation" >)</span>
+          <span class="token punctuation" >.</span><span class="token keyword" >get</span><span class="token punctuation" >(</span><span class="token string" >'/devices'</span><span class="token punctuation" >)</span>
+          <span class="token punctuation" >.</span><span class="token function" >end</span><span class="token punctuation" >(</span><span class="token punctuation" >(</span>err<span class="token punctuation" >,</span> response<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> <span class="token punctuation" >{</span>
+            response<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span>have<span class="token punctuation" >.</span><span class="token function" >status</span><span class="token punctuation" >(</span><span class="token number" >200</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+            response<span class="token punctuation" >.</span>body<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span>be<span class="token punctuation" >.</span><span class="token function" >a</span><span class="token punctuation" >(</span><span class="token string" >'array'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+            response<span class="token punctuation" >.</span>body<span class="token punctuation" >[</span><span class="token number" >0</span><span class="token punctuation" >]</span><span class="token punctuation" >.</span>devicename<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span><span class="token function" >be</span><span class="token punctuation" >(</span><span class="token string" >'mohammad.mac.local'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+            response<span class="token punctuation" >.</span>body<span class="token punctuation" >.</span>length<span class="token punctuation" >.</span>be<span class="token punctuation" >.</span><span class="token function" >eql</span><span class="token punctuation" >(</span><span class="token number" >10</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+            <span class="token function" >done</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span> 
+  <span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+  <span class="token function" >describe</span><span class="token punctuation" >(</span><span class="token string" >'POST /devices'</span><span class="token punctuation" >)</span>
+    <span class="token function" >it</span><span class="token punctuation" >(</span><span class="token string" >'shoud not POST a device without devicename'</span><span class="token punctuation" >,</span> <span class="token punctuation" >(</span>done<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> <span class="token punctuation" >{</span>
+      <span class="token keyword" >let</span> device <span class="token operator" >=</span> <span class="token punctuation" >{</span>
+        operatingSystem<span class="token punctuation" >:</span> <span class="token string" >'Windows'</span><span class="token punctuation" >,</span>
+        version<span class="token punctuation" >:</span>         <span class="token string" >'5.8.7'</span><span class="token punctuation" >,</span> 
+        country<span class="token punctuation" >:</span>         <span class="token string" >'USA'</span>
+      <span class="token punctuation" >}</span>
+      chai<span class="token punctuation" >.</span><span class="token function" >request</span><span class="token punctuation" >(</span>url<span class="token punctuation" >)</span>
+          <span class="token punctuation" >.</span><span class="token function" >post</span><span class="token punctuation" >(</span><span class="token string" >'/devices'</span><span class="token punctuation" >)</span>
+          <span class="token punctuation" >.</span><span class="token function" >send</span><span class="token punctuation" >(</span>device<span class="token punctuation" >)</span>
+          <span class="token punctuation" >.</span><span class="token function" >end</span><span class="token punctuation" >(</span><span class="token punctuation" >(</span>err<span class="token punctuation" >,</span> response<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span> <span class="token punctuation" >{</span>
+            response<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span>have<span class="token punctuation" >.</span><span class="token function" >status</span><span class="token punctuation" >(</span><span class="token number" >401</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+            response<span class="token punctuation" >.</span>body<span class="token punctuation" >.</span>errorMessage<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span><span class="token function" >contain</span><span class="token punctuation" >(</span><span class="token string" >'missing field'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+            <span class="token function" >done</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+    <span class="token punctuation" >}</span><span class="token punctuation" >)</span> 
+  <span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+
+<span class="token punctuation" >}</span><span class="token punctuation" >)</span>
+</code></pre>
+<p>A few notes:</p>
+<ul>
+<li>This is the entire code for those to simple tests. See how short and readable it is.</li>
+<li>No external files need to be loaded.</li>
+<li>Because we are using Javascript, no need for serialization functions since
+JSON is derived from JavaScript Object. So we can just pass the Javascript object
+into the request by <em>stringifying</em> it (done by chai http library).</li>
+<li>Because I am using a programming language, I can easily write fine-grained tests
+that do more coverage.</li>
+</ul>
+<p>Lets look at the other hand how the same test is written in Robot Framework:</p>
+<pre><code class="language-shell">
+*** Test Cases *** 
+GET Devices 
+
+    Next Request Should Have Status Code   200
+    GET  /devices
+    ${body}  Get Response Body
+    @{json}  Evaluate  json.loads($body)  modules=json
+    &amp;{first_device}  Set Variable  ${json}[0];
+    Should Be Equal  &amp;{first_device}[devicename]  mohammad.mac.local 
+    Length Should Be  ${json}  10
+
+POST Devices
+  
+   # below I'm trying to create a json object
+   ${json}  Set Json Value  {}       /operatingSystem  true
+   ${json}  Set Json Value  ${json}  /version          5.8.7
+   ${json}  Set Json Value  ${json}  /country          USA
+
+   Set Request Body  ${json}
+   Next Request Should Have Status Code   401
+   POST /devices
+
+   ${body}  Get Request Body
+   Should Contain  ${body}  missing feild
+</code></pre>
+<p>Here are a few notes on Robot Framework:</p>
+<ul>
+<li>Using keywords is very restricting and opinionated. the more complicated the
+logic, the less readable the test case and the more tedious and cumbersome.</li>
+<li>While we could encapsulate logic in keywords, the keywords library gets really
+large and difficult to maintain.</li>
+</ul>
+<p>In conclusion, I am writing very isolated unit cases. I do need the ability to
+<em>quickly write tests without unnecessary overhead</em>.</p>
+<h3>It is more convenient &amp; faster to write tests in the same development language</h3>
+<p>I write my own support tools in Javascript that will help me quickly view user's
+accounts using the live REST service.</p>
+<ul>
+<li>It is more intuitive to quickly write tests in the <strong>same</strong> development language for my tools. For examples, I use the same HTTP library for the development tools as well as the tests.</li>
+<li>Tests are written in exactly the same development environment with <code>npm</code>(<a href="https://www.npmjs.com/">npmjs.cpm</a>) as the command line tools i write. Therefore, everything is in one eco system, which is easy to maintain.</li>
+</ul>
+<h2>Mochajs &amp; Chaijs Javascript Libraries</h2>
+<p>Mochajs is a Javascript test framework while Chaijs is an assertion library.
+Both extremely popular and widle used together to write tests.</p>
+<h3>Mochajs</h3>
+<ul>
+<li>Simple setup. Headless running out of the box</li>
+<li>Supported by some CI servers and plugins for others (jenkins has a maven plugin)</li>
+<li>Has a huge support community; asnwers on Stackoverflow, tutorials, plugins ...etc</li>
+<li>Of course it is open source.</li>
+</ul>
+<p>Here is an example of Mocha's command line output for a test suite:</p>
+<p><img src="/img/mochajs.png" alt="mochejs" /></p>
+<p>Let's do a quick comparison on github in terms of popularity &amp; community:</p>
+<pre><code class="language-text">Github stats           Stars     forks
+
+Mochajs                10,661    1,606
+Robot Framework        1,192     449 
+
+Both frameworks are actively maintained
+</code></pre>
+<h3>Chaijs</h3>
+<blockquote>
+<p>Chai is an assertion library, similar to Node's build in assert. It makes testing much easier by giving you lots of assertions you can run against your code. — <a href="https://github.com/chaijs/chai">Chaijs Github Page</a></p>
+</blockquote>
+<p>Chaijs is simply an assertion library. It offers very user freindly assertion style.
+Below are some examples of the different assertion styles from their documentation page.
+See how readable and human freindly the assertions are similary to Robot Framework.</p>
+<p><strong>Assertion style</strong></p>
+<pre><code class="language-javascript">assert<span class="token punctuation" >.</span><span class="token function" >typeOf</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >,</span> <span class="token string" >'string'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span> <span class="token comment" spellcheck="true">// without optional message</span>
+assert<span class="token punctuation" >.</span><span class="token function" >typeOf</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >,</span> <span class="token string" >'string'</span><span class="token punctuation" >,</span> <span class="token string" >'foo is a string'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span> <span class="token comment" spellcheck="true">// with optional message</span>
+assert<span class="token punctuation" >.</span><span class="token function" >equal</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >,</span> <span class="token string" >'bar'</span><span class="token punctuation" >,</span> <span class="token string" >'foo equal `bar`'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+assert<span class="token punctuation" >.</span><span class="token function" >lengthOf</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >,</span> <span class="token number" >3</span><span class="token punctuation" >,</span> <span class="token string" >'foo`s value has a length of 3'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+assert<span class="token punctuation" >.</span><span class="token function" >lengthOf</span><span class="token punctuation" >(</span>beverages<span class="token punctuation" >.</span>tea<span class="token punctuation" >,</span> <span class="token number" >3</span><span class="token punctuation" >,</span> <span class="token string" >'beverages has 3 types of tea'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+</code></pre>
+<p><strong>BDD</strong></p>
+<pre><code class="language-javascript"><span class="token function" >expect</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >)</span><span class="token punctuation" >.</span>to<span class="token punctuation" >.</span>be<span class="token punctuation" >.</span><span class="token function" >a</span><span class="token punctuation" >(</span><span class="token string" >'string'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+<span class="token function" >expect</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >)</span><span class="token punctuation" >.</span>to<span class="token punctuation" >.</span><span class="token function" >equal</span><span class="token punctuation" >(</span><span class="token string" >'bar'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+<span class="token function" >expect</span><span class="token punctuation" >(</span>foo<span class="token punctuation" >)</span><span class="token punctuation" >.</span>to<span class="token punctuation" >.</span>have<span class="token punctuation" >.</span><span class="token function" >length</span><span class="token punctuation" >(</span><span class="token number" >3</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+<span class="token function" >expect</span><span class="token punctuation" >(</span>beverages<span class="token punctuation" >)</span><span class="token punctuation" >.</span>to<span class="token punctuation" >.</span>have<span class="token punctuation" >.</span><span class="token function" >property</span><span class="token punctuation" >(</span><span class="token string" >'tea'</span><span class="token punctuation" >)</span><span class="token punctuation" >.</span><span class="token keyword" >with</span><span class="token punctuation" >.</span><span class="token function" >length</span><span class="token punctuation" >(</span><span class="token number" >3</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+</code></pre>
+<p><strong>Should</strong></p>
+<pre><code class="language-javascript">foo<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span>be<span class="token punctuation" >.</span><span class="token function" >a</span><span class="token punctuation" >(</span><span class="token string" >'string'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+foo<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span><span class="token function" >equal</span><span class="token punctuation" >(</span><span class="token string" >'bar'</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+foo<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span>have<span class="token punctuation" >.</span><span class="token function" >length</span><span class="token punctuation" >(</span><span class="token number" >3</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+beverages<span class="token punctuation" >.</span>should<span class="token punctuation" >.</span>have<span class="token punctuation" >.</span><span class="token function" >property</span><span class="token punctuation" >(</span><span class="token string" >'tea'</span><span class="token punctuation" >)</span><span class="token punctuation" >.</span><span class="token keyword" >with</span><span class="token punctuation" >.</span><span class="token function" >length</span><span class="token punctuation" >(</span><span class="token number" >3</span><span class="token punctuation" >)</span><span class="token punctuation" >;</span>
+</code></pre>
+<h2>Migration Plan</h2>
+<p>Since there are existing number of Robot Framework tests for ED REST, first
+thought would come to mind is the migration process. While I do not have
+an exact estimate on the amount of time it would take, it should not be very hard
+to migrate considering how straight-forward to write tests in Mochajs.</p>
+<p>Also, it is definitely worth the investment considering the benefits of quickly
+writing tests in an agile environment.</p>
+<h2>Final Thoughts</h2>
+<ul>
+<li>I write my command line tools in Javascript, therefore, it would tremendously
+increase my performance if I write tests in the same development language.</li>
+<li>Robot Framework is an over kill for small unit tests. Every time I write tests,
+I have to create new keywords. The keyword library grows really large and hard
+to maintain.</li>
+</ul>
+
+      </section>
+
+    </div>
+
+  </article>
+</div>
+
+
+
+  </div>
+
+  <footer>
+  <p>Design inspired by <a target='_blank' href="http://paulmillr.com/">Paul Miller</a>, proudly implemented by <a href="#">me</a>.</p>
+</footer>
+
+<script type="text/javascript" src="/reptar-site/js/main-b730289aae.js"></script>
+</body>
+
+</html>
