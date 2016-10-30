@@ -6,5 +6,9 @@ social:
   stackoverflow: http://stackoverflow.com/users/5431968/mmohammad
   linkedin: https://www.linkedin.com/in/mohammad91
 
-about_me: Hi my name is mohammad mohammad. <a href='#'>learn more</a>
-  Obviously i'm nevjkoiyn this crazy.
+about_me: >
+  My name is Mohammad Mohammad (that explains the ²). I'm from Kuwait
+  and currently live in Los Angeles. I work at 
+  <a target='_blank' href='http://home.elephantdrive.com/'>ElephantDrive</a> 
+  as a Technical Specialist.I spend a lot of time playing with Node.js and open source projects on Github. 
+  You can learn more about me here <a href='/about'>here</a>.

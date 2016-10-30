@@ -63,7 +63,7 @@ h3 {
 }
 
 p, ul, ol, li {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p, ul, ol, blockquote {
@@ -75,9 +75,8 @@ p, ul, ol, blockquote {
 
 body {
   line-height: $line-height;
-  font-size: $font-size-base;
+  font-size: $font-size-root;
   font-family: $font-family-base;
-  color: $p-color;
 }
 
 .small-text * {
@@ -86,4 +85,13 @@ body {
 
 .align-center{
   text-align: center;
+}
+.align-left{
+  text-align: left;
+}
+
+hr {
+  @include custom-hr(0, 80%) {
+    margin: 1em auto;
+  }
 }

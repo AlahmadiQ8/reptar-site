@@ -1,5 +1,5 @@
 <header class='container'>
-  <div class="cell-9 profile col-flex">
+  <div class="cell-10 profile col-flex">
     <div class="  align-center">
       <h1><a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">Mohammad²</a></h1>  
       <div class="social-list">
@@ -13,11 +13,20 @@
     <img class='' src="{% if site.baseurl %}{{site.baseurl}}{% endif %}/img/avatar.png">
   </div> 
 
-  <div class="cell-15 col-flex">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in</p>
+  <div class="cell-14 col-flex about-me">
+    <p>{{ site.data.site_info.about_me }}</p>
   </div>
+
+  
+  <nav class="cell-1">
+    <a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">Home</a>
+    <a target="_blank" href="mailto:m91.alahmadi@gmail.com?subject=[My Site]">Contact</a>
+    {% if collections.static %}  
+    {% for file in collections.static.files %}
+    <a href="{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ file.url }}">{{ file.title }}</a>
+    {% endfor%}
+    {% endif %}
+  </nav>
+  
   
 </header>

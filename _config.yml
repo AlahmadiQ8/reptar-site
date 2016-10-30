@@ -7,8 +7,8 @@ site:
   email: m91.alahmadi@gmail.com
   description: > # this means to ignore newlines until "baseurl:"
     My personal website. 
-  baseurl: "/reptar-site" # the subpath of your site, e.g. /blog
-  # baseurl: "" # the subpath of your site, e.g. /blog
+  # baseurl: "/reptar-site" # the subpath of your site, e.g. /blog
+  baseurl: "" # the subpath of your site, e.g. /blog
   url: "http://alahmadiq8.github.io" # the base hostname & protocol for your site
 
 # Where things are.
@@ -74,6 +74,8 @@ file:
 # This is where you configure your collections of content.
 # For more details refer to the Collections documentation.
 collections:
+  static: 
+    path: ./_static
   post:
     path: ./_posts
     template: index
@@ -128,8 +130,8 @@ markdown:
 # When running `reptar serve` what settings should be used.
 server:
   port:    8080
-  host:    127.0.0.1
-  baseurl: "" # does not include hostname
+  host:    0.0.0.0
+  baseurl: "/reptar-site" # does not include hostname
 
 # Only build files that have changed.
 # This is a performance improvement to the time it takes to build your site.

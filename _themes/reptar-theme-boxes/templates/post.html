@@ -10,11 +10,13 @@
       <h1>{{ file.title }}</h1>
       <p class='article-details'>
         <time class='date' datetime="{{file.date | date('D MMMM YYYY')}}"><strong>Posted on: </strong> {{file.date | date('D MMMM YYYY')}}</time>
+        {% if file.tags %}
         <span class='date'><strong>Tags: </strong> 
           {% for tag in file.tags %}
           <a href="/tag/{{tag}}" class='tag-link'>{{tag}}</a>
           {% endfor%}
         </span>
+        {% endif %}
       </p>
 
       <section class="post-content">

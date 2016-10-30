@@ -10,6 +10,9 @@ body{
 %border {
   border: 1px dashed #bbb;
 }
+%no-border {
+  border: none;
+}
 
 #main-container {
   @extend %sticky-footer-content;
@@ -33,9 +36,12 @@ body{
 }
 
 %cell-padding {
-  padding: 25px;
+  padding: 10px;
   margin-right: $gutter-px;
   margin-bottom: $gutter-px;
+  @include breakpoint($md) {
+    padding: 25px;
+  }
 }
 
 %cell-common {

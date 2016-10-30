@@ -56,7 +56,7 @@ $hover-color:             $blue-light;
 // 
 
 // font-family
-$font-family-sans-serif:     "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-ejs:            'Montserrat', sans-serif;
@@ -104,7 +104,7 @@ $xl:    1200px; // Extra large screen / wide desktop
 // 
 
 $main-width:   1000px;
-$gutter:       .9%; 
+$gutter:       1.25%; 
 $gutter-px:    $main-width* $gutter/100%;
 $columns:      24; 
 $multiplier:   100%/$columns;

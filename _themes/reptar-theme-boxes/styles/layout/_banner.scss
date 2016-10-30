@@ -24,6 +24,10 @@
   }
 }
 
+.about-me p {
+  font-weight: 300;
+  font-size: $font-size-md;
+}
 
 
 .social-list{
@@ -36,4 +40,15 @@
   display: inline;
   font-size: 1.5rem;
   // padding: 0 .25em 0 .25em;
+}
+
+nav {
+  order: -1;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row !important;
+  @include breakpoint($lg) {
+    order: 1;
+    flex-direction: column !important;
+  }
 }

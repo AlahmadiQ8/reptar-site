@@ -16,5 +16,9 @@
     "reptar-excerpt": "^0.7.0",
     "reptar-html-minifier": "^0.7.0",
     "reptar-theme-thread": "^0.3.3"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "reptar": "file:../reptar"
   }
 }

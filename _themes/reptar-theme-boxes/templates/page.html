@@ -4,16 +4,6 @@
 
 {% block content %}
 
-<article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{file.title}}</h1>
-  </header>
-
-  <section class="post-content">
-    {{file.content | safe}}
-  </section>
-
-</article>
+{{file.content | safe}}
 
 {% endblock%}
