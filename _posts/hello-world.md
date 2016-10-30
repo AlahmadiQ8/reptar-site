@@ -3,6 +3,9 @@ title: Hello World!
 date: 2016-10-25
 tags:
 - meta
+- testing
+- omg
+draft: true 
 ---
 
 > A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.

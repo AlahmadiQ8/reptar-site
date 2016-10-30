@@ -37,14 +37,32 @@
   font-size: $font-size-sm;
 }
 
-.message {
+%message {
   @extend %cell-common;
   @extend %border;
   margin-right: $gutter-px;
   margin-bottom: $gutter-px;
   padding: 10px 25px;
+  .js-close {
+    float: right;
+    cursor: pointer;
+  }
   border-color: #D32F2F; 
   color: #D32F2F;
+  background-color: #FFEBEE;
+}
+
+.red-message {
+  @extend %message;
+  border-color: #D32F2F; 
+  color: #D32F2F;
+  background-color: #FFEBEE;
+}
+.blue-message {
+  @extend %message;
+  border-color: #0D47A1; 
+  color: #0D47A1;
+  background-color: #E3F2FD;
 }
 
 //--------------------------

@@ -1,8 +1,25 @@
 <h1>Posts</h1>
 
-<p><span class='secondary'>10-2014 »</span> <a href="#">Lorem ipsum dolor sit amet</a> — consectetur adipisicing elit, sed do eiusmod
+{% for file in collections.post.files %}
+
+<p>
+  <span class='secondary'>{{file.date | date('YYYY-MM-DD')}} »</span>
+  <a href="{{file.url}}">{{file.title}}</a>{% if file.tags %} — {% for tag in file.tags %}<a href="#" class='tag-link'>{{tag}}</a> {% endfor %}{% endif %}
+</p>
+
+{% else %}
+
+<div class="container">
+  <div class="blue-message">
+    <p><i class="fa fa-exclamation" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Oops.. I don't have any posts yet. Stay tuned!</p>
+  </div>
+</div>
+
+{% endfor %}
+
+{# <p><span class='secondary'>10-2014 »</span> <a href="#">Lorem ipsum dolor sit amet</a> — consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim — <a href="#" class='tag-link'>Node.js</a> <a href="#" class='tag-link'>tutorial</a> <a href="#" class='tag-link'>javascript</a></p>
 <p><span class='secondary'>06-2014 »</span> <a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
 <p><span class='secondary'>11-2014 »</span> <a href="#">Lorem ipsum dolor sit amet</a> — consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p>
+tempor incididunt ut labore et dolore magna aliqua. Ut enim.</p> #}

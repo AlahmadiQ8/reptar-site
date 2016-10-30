@@ -76,6 +76,8 @@ file:
 collections:
   static: 
     path: ./_static
+    permalink:
+      index: /
   post:
     path: ./_posts
     template: index
@@ -84,7 +86,7 @@ collections:
       key: date
       order: descending
     permalink:
-      index: /
+      index: /posts
       page:  /page/:page/
   tag:
     metadata: tags
