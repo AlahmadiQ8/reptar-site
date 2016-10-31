@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "reptar build && reptar watch",
-    "build": "reptar build",
-    "deploy": "gh-pages -d _site",
-    "bd": "npm run build && npm run deploy"
+    "build": "reptar clean && reptar build",
+    "deploy": "gh-pages -d _site -r https://github.com/AlahmadiQ8/alahmadiq8.github.io.git -b master",
+    "bd": "reptar clean && npm run build && npm run deploy",
+    "temp": "gh-pages -h"
+
   },
   "keywords": [],
   "author": "",
