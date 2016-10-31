@@ -6975,7 +6975,7 @@ pre[class*="language-"] {
  */
 /* THEME COLOR MAPPING
  */
-.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8, .cell-9, .cell-10, .cell-11, .cell-12, .cell-13, .cell-14, .cell-15, .cell-16, .cell-17, .cell-18, .cell-19, .cell-20, .cell-21, .cell-22, .cell-23, .cell-24, footer, .message {
+.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8, .cell-9, .cell-10, .cell-11, .cell-12, .cell-13, .cell-14, .cell-15, .cell-16, .cell-17, .cell-18, .cell-19, .cell-20, .cell-21, .cell-22, .cell-23, .cell-24, footer, .red-message, .blue-message, article .table-of-contents {
   border: 1px dashed #bbb; }
 
 body {
@@ -7037,7 +7037,7 @@ h3 {
   color: #333; }
 
 p, ul, ol, li {
-  font-weight: 300; }
+  font-weight: 400; }
 
 p, ul, ol, blockquote {
   margin-bottom: .6em; }
@@ -7046,8 +7046,8 @@ p, ul, ol, blockquote {
 
 body {
   line-height: 1.4em;
-  font-size: 1.13rem;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .small-text * {
   font-size: 0.875rem; }
@@ -7058,13 +7058,20 @@ body {
 .align-left {
   text-align: left; }
 
+hr {
+  border-top: 1px dashed #bbb;
+  border-bottom: 0;
+  height: 0;
+  width: 80%;
+  margin: 1em auto; }
+
 body {
   padding: 0 10px; }
   @media (min-width: 992px) {
     body {
       padding: 0; } }
 
-.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8, .cell-9, .cell-10, .cell-11, .cell-12, .cell-13, .cell-14, .cell-15, .cell-16, .cell-17, .cell-18, .cell-19, .cell-20, .cell-21, .cell-22, .cell-23, .cell-24, footer, .message {
+.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8, .cell-9, .cell-10, .cell-11, .cell-12, .cell-13, .cell-14, .cell-15, .cell-16, .cell-17, .cell-18, .cell-19, .cell-20, .cell-21, .cell-22, .cell-23, .cell-24, footer, .red-message, .blue-message, article .table-of-contents {
   border: 1px dashed #bbb; }
 
 #main-container {
@@ -7093,7 +7100,7 @@ body {
     .cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8, .cell-9, .cell-10, .cell-11, .cell-12, .cell-13, .cell-14, .cell-15, .cell-16, .cell-17, .cell-18, .cell-19, .cell-20, .cell-21, .cell-22, .cell-23, .cell-24 {
       padding: 25px; } }
 
-.cell-1, .cell-1-nopadding, .cell-2, .cell-2-nopadding, .cell-3, .cell-3-nopadding, .cell-4, .cell-4-nopadding, .cell-5, .cell-5-nopadding, .cell-6, .cell-6-nopadding, .cell-7, .cell-7-nopadding, .cell-8, .cell-8-nopadding, .cell-9, .cell-9-nopadding, .cell-10, .cell-10-nopadding, .cell-11, .cell-11-nopadding, .cell-12, .cell-12-nopadding, .cell-13, .cell-13-nopadding, .cell-14, .cell-14-nopadding, .cell-15, .cell-15-nopadding, .cell-16, .cell-16-nopadding, .cell-17, .cell-17-nopadding, .cell-18, .cell-18-nopadding, .cell-19, .cell-19-nopadding, .cell-20, .cell-20-nopadding, .cell-21, .cell-21-nopadding, .cell-22, .cell-22-nopadding, .cell-23, .cell-23-nopadding, .cell-24, .cell-24-nopadding, .message {
+.cell-1, .cell-1-nopadding, .cell-2, .cell-2-nopadding, .cell-3, .cell-3-nopadding, .cell-4, .cell-4-nopadding, .cell-5, .cell-5-nopadding, .cell-6, .cell-6-nopadding, .cell-7, .cell-7-nopadding, .cell-8, .cell-8-nopadding, .cell-9, .cell-9-nopadding, .cell-10, .cell-10-nopadding, .cell-11, .cell-11-nopadding, .cell-12, .cell-12-nopadding, .cell-13, .cell-13-nopadding, .cell-14, .cell-14-nopadding, .cell-15, .cell-15-nopadding, .cell-16, .cell-16-nopadding, .cell-17, .cell-17-nopadding, .cell-18, .cell-18-nopadding, .cell-19, .cell-19-nopadding, .cell-20, .cell-20-nopadding, .cell-21, .cell-21-nopadding, .cell-22, .cell-22-nopadding, .cell-23, .cell-23-nopadding, .cell-24, .cell-24-nopadding, .red-message, .blue-message {
   flex-direction: row;
   flex: 1 1 auto;
   flex-shrink: 0; }
@@ -7352,6 +7359,10 @@ footer {
     max-width: 100%;
     height: auto; }
 
+.about-me p {
+  font-weight: 300;
+  font-size: 1rem; }
+
 .social-list {
   margin-top: 1em;
   margin-bottom: .5em;
@@ -7389,12 +7400,50 @@ footer {
 .secondary {
   color: #A3A3A3; }
 
-.message {
+.no-bottom-margin {
+  margin-bottom: 0; }
+
+.spread-horizonaly {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row wrap; }
+  @media (max-width: 768px) {
+    .spread-horizonaly {
+      flex-direction: column; }
+      .spread-horizonaly p {
+        margin-bottom: 0; } }
+
+.line-top {
+  border-top: 1px dashed #bbb; }
+  .line-top:first-child {
+    border-top: none; }
+
+.no-border {
+  border: none; }
+
+.text-sm {
+  font-size: 0.875rem; }
+
+.red-message, .blue-message {
   margin-right: 12.5px;
   margin-bottom: 12.5px;
   padding: 10px 25px;
   border-color: #D32F2F;
-  color: #D32F2F; }
+  color: #D32F2F;
+  background-color: #FFEBEE; }
+  .red-message .js-close, .blue-message .js-close {
+    float: right;
+    cursor: pointer; }
+
+.red-message {
+  border-color: #D32F2F;
+  color: #D32F2F;
+  background-color: #FFEBEE; }
+
+.blue-message {
+  border-color: #0D47A1;
+  color: #0D47A1;
+  background-color: #E3F2FD; }
 
 .tag-link {
   color: #737273;
@@ -7415,12 +7464,12 @@ article {
     margin-bottom: 0; }
   article h2 {
     font-size: 1.4rem;
-    padding: .4em 0 0.2em 0;
+    padding: .4em 0 0.7em 0;
     border-bottom: 1px solid #e1e1e1;
-    line-height: 2rem; }
+    line-height: 2rem;
+    color: #253746; }
   article h3 {
     font-size: 1.2rem;
-    color: #5B5B5B;
     margin-top: 1em; }
   article .post-content strong {
     font-weight: bold; }
@@ -7434,11 +7483,31 @@ article {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
+    margin: 1.5em 0;
     padding: .7em 1em;
-    border-left: 1px solid #bbb;
+    border-left: 2px solid #bbb;
     color: #A3A3A3; }
     article blockquote p {
       font-weight: 400; }
+  article .table-of-contents {
+    padding: 10px;
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    position: absolute;
+    left: 68%;
+    width: 313px; }
+    article .table-of-contents li {
+      font-size: .9rem; }
+    article .table-of-contents > ul {
+      padding-left: 0; }
+    article .table-of-contents li {
+      list-style: none;
+      margin-left: 0; }
+    article .table-of-contents > ul > li > ul > li {
+      list-style: disc; }
+    @media (max-width: 992px) {
+      article .table-of-contents {
+        display: none; } }
 
 .article-details {
   margin-bottom: 1em;
@@ -7447,4 +7516,7 @@ article {
     margin-right: 1em; }
 
 .sidebar p, .sidebar ul, .sidebar li {
+  font-size: 1rem; }
+
+.about-me h2 {
   font-size: 1rem; }
