@@ -7,9 +7,11 @@ date: 2016-10-25
 <div class="container about-me">
     <div class='cell-9'>
       <h1>About me</h1>
-      <h2>Who am I</h2>
       <h2>Free Time</h2>
+      <p>When I'm not working, I enjoy hiking and water activites (rafting). I also read a lot of non-fiction books on personal finance.</p>
       <h2>Why This Site</h2>
+      <p>The puspose of this site obviously to establish my online presence. But most importantly, to document and keep track of my professional growth. Another is to hone my fronend skills by building this site. Also… it’s fancy and makes me look cool . 
+      </p>
     </div>
     <div class="cell-9">
       <h1>Education</h1>

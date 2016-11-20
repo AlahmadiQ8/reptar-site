@@ -1,4 +1,15 @@
 <header class='container'>
+
+  <nav class="cell-1">
+    <a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">Home</a>
+    <a target="_blank" href="mailto:m91.alahmadi@gmail.com?subject=[My Site]">Contact</a>
+    {% if collections.static %}  
+    {% for file in collections.static.files %}
+    <a href="{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ file.url }}">{{ file.title }}</a>
+    {% endfor%}
+    {% endif %}
+  </nav>
+
   <div class="cell-10 profile col-flex">
     <div class="  align-center">
       <h1><a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">Mohammad²</a></h1>  
@@ -18,15 +29,6 @@
   </div>
 
   
-  <nav class="cell-1">
-    <a href="{% if site.baseurl %}{{site.baseurl}}{% else %}/{% endif %}">Home</a>
-    <a target="_blank" href="mailto:m91.alahmadi@gmail.com?subject=[My Site]">Contact</a>
-    {% if collections.static %}  
-    {% for file in collections.static.files %}
-    <a href="{% if site.baseurl %}{{site.baseurl}}{% endif %}{{ file.url }}">{{ file.title }}</a>
-    {% endfor%}
-    {% endif %}
-  </nav>
-  
-  
+
+
 </header>
