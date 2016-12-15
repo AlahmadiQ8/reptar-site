@@ -15,12 +15,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "reptar-excerpt": "^0.7.0",
     "reptar-html-minifier": "^0.7.0",
-    "reptar-theme-thread": "^0.3.3"
+    "reptar-theme-thread": "^0.3.3",
+    "reptar-table-of-contents": "file:../reptar-table-of-contents"
   },
   "devDependencies": {
     "babel": "^6.5.2",
-    "reptar": "file:../reptar"
+    "reptar": "2.3.0"
   }
 }

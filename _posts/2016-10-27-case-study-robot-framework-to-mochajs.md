@@ -1,7 +1,7 @@
 ---
 title: Case Study Robot Framework to Mochajs
 date: 2016-10-27
-draft: true
+draft: false
 ---
 
 [[toc]]
