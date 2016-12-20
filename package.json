@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ghooks": "^1.3.2",
     "markdown-it-anchor": "^2.6.0",
     "markdown-it-table-of-contents": "^0.3.1",
     "reptar": "^2.3.1",
