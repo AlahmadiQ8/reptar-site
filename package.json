@@ -9,15 +9,16 @@
     "deploy": "gh-pages -d _site -r https://github.com/AlahmadiQ8/alahmadiq8.github.io.git -b master",
     "bd": "reptar clean && npm run build && npm run deploy",
     "temp": "gh-pages -h"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "markdown-it-anchor": "^2.6.0",
+    "markdown-it-table-of-contents": "^0.3.1",
+    "reptar": "^2.3.1",
     "reptar-html-minifier": "^0.7.0",
-    "reptar-theme-thread": "^0.3.3",
-    "reptar-table-of-contents": "file:../reptar-table-of-contents"
+    "reptar-theme-thread": "^0.3.3"
   },
   "devDependencies": {
     "babel": "^6.5.2",

@@ -145,14 +145,10 @@ new_file_permalink: '/_posts/:date|YYYY-:date|MM-:date|D-:title.md'
 # What plugins you want enabled and what configuration settings they should have.
 plugins:
   html-minifier:
-    enabled: true
+    enabled: false
     options:
       collapseWhitespace: true
       collapseBooleanAttributes: true
       removeAttributeQuotes: true
   excerpt:
-    enabled: true
-  table-of-contents:
-    enabled: true
-    options:
-      includeLevel: [2, 3]
+    enabled: false
