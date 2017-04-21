@@ -36,7 +36,7 @@ date: 2016-10-25
     <!-- ElephantDrive -->
     <h2 class='no-bottom-margin'>ElephantDrive</h2>
     <div class="spread-horizonaly">
-    <p class="secondary">Technical Specialist</p>
+    <p class="secondary">Developer Support Engineer</p>
     <p class="secondary text-sm">March 2016 - Present</p>
     </div>
     <ul>
@@ -83,7 +83,11 @@ date: 2016-10-25
   <div class="cell-12-nopadding vertical-stretch">
     <div class="cell-10">
       <h1>Projects</h1>
-      <h2>Misc/Fun</h2>
+      <h2>Misc</h2>
+      <ul>
+        <li><a href="https://alahmadiq8.github.io/S3-Routing-Rules-Builder/">Amazon S3 Routing Rules Builder</a> — Inspired by <a href="https://www.netlify.com/docs/redirects/">Netlify</a>'s redirect syntax, build <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/HowDoIWebsiteConfiguration.html#configure-bucket-as-website-routing-rule-syntax">S3 conditional routing rules</a> using a simple space separated syntax.
+        </li>
+      </ul>
       <ul>
         <li><a href="https://wunderlist-parser.herokuapp.com/">WunderList Parser</a> — A Node.js web app to parse line separated tasks into <a target="_blank" href="https://www.wunderlist.com">WunderList</a> user's
         account using Wunderlist REST api. This was an implemenation of a users' 
